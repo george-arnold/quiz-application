@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The American Education Quiz </title>
+</head>
+<body>
+    <!-- The title page of the quiz-->
+    <header>
+        <h1> The American Education Quiz</h1>
+    </header>
+    <main>
+        <p>A quiz about education in America</p>
+    
+    <button>
+        <span>Start!</span>
+    </button>
+    </main>
+<!-- After hitting start, this should generate-->
+    <section>
+        <h2>Question <span class="question-number">1</span> of 5. </h2>
+      
+        <form>
+                <fieldset>
+                        <legend class="question">Many European nations have nearly 50% of high school students enrolled in 
+                            vocational education programs. What percentage of high school students in the US are enrolled 
+                            in vocational programs? </legend>
+                        <input type="radio" name="education" id="ans-1" value="0">
+                        <label for="ans-great-1">32%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-2" value="1">
+                        <label  style="border:3px solid green;" for="ans-great-2">6%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-3" value="2">
+                        <label for="ans-great-3">15%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-4" value="3">
+                        <label for="ans-great-3">65%</label>
+                        <br>
+                        <button type='submit' for="question">Submit!</button>
+                </fieldset>
+        </form>
+        <h3> Your score is <span class ="current-score"> 0</span> out of <span class= "possible-score">0</span>.</h3>
+        </section>
+
+<!-- After hitting submit, the next question should generate with same template-->
+<!-- After submitting final question, this page will generate-->
+<section>
+    <h1>Your Final Score!</h1>
+
+    <h2>
+         <span class ="current-score">0</span> out of <span class= "possible-score">0</span>
+    </h2>
+</section>
+<footer>
+    <h3> Thanks for taking the Quiz!</h3>
+    <button href="index.html">Try Again!</button>
+</footer>
+</body>
+</html>
