@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The American Education Quiz </title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- The title page of the quiz-->
@@ -14,9 +18,7 @@
     <main>
         <p>A quiz about education in America</p>
     
-    <button>
-        <span>Start!</span>
-    </button>
+    <button class = "js-start-button"> Start </button>
     </main>
 <!-- After hitting start, this should generate-->
     <section>
@@ -24,8 +26,7 @@
       
         <form>
                 <fieldset>
-                        <legend class="question">Many European nations have nearly 50% of high school students enrolled in 
-                            vocational education programs. What percentage of high school students in the US are enrolled 
+                        <legend class="question"> 1) What percentage of high school students in the US are enrolled 
                             in vocational programs? </legend>
                         <input type="radio" name="education" id="ans-1" value="0">
                         <label for="ans-great-1">32%</label>
@@ -39,13 +40,93 @@
                         <input type="radio" name="education" id="ans-4" value="3">
                         <label for="ans-great-3">65%</label>
                         <br>
+                        <button type='submit'>Submit!</button>
+                </fieldset>
+        </form>
+        <form>
+                <fieldset>
+                        <legend class="question question-2">2) Approximately what percentage of US college graduates are in jobs that don’t require the degree they earned?  </legend>
+                        <input type="radio" name="education" id="ans-1" value="0">
+                        <label for="ans-1">10%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-2" value="1">
+                        <label  for="ans-2">22%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-3" value="2">
+                        <label for="ans-3">15%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-4" value="3">
+                        <label style="border:3px solid green;" for="ans-4">33%</label>
+                        <br>
+                        <button type='submit'>Submit!</button>
+                </fieldset>
+        </form>
+        <form>
+                <fieldset>
+                        <legend class="question question-3">3) Six years after first enrolling in college, approximately what percentage of students have not attained a degree? </legend>
+                        <input type="radio" name="education" id="ans-1" value="0">
+                        <label style="border:3px solid green;" for="ans-1">40%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-2" value="1">
+                        <label  for="ans-2">30%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-3" value="2">
+                        <label for="ans-3">25%</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-4" value="3">
+                        <label  for="ans-4">17%</label>
+                        <br>
+                        <button type='submit'>Submit!</button>
+                </fieldset>
+        </form>
+        <form>
+                <fieldset>
+                        <legend class="question question-3">4) In the next 12 years, 1 of every ___ Americans are in danger of losing their jobs to new technologies </legend>
+                        <input type="radio" name="education" id="ans-1" value="0">
+                        <label for="ans-1">10</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-2" value="1">
+                        <label  for="ans-2">5</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-3" value="2">
+                        <label  style="border:3px solid green;" for="ans-3">3</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-4" value="3">
+                        <label  for="ans-4">20</label>
+                        <br>
+                        <button type='submit'>Submit!</button>
+                </fieldset>
+                
+        </form>
+        <form>
+                <fieldset>
+                        <legend class="question question-3">5) Which current US presidential candidate has vowed to help correct the over-prescription of college,
+                             and limit the danger of job loss, by increasing funding towards vocational training options in public schools? </legend>
+                        <input type="radio" name="education" id="ans-1" value="0">
+                        <label for="ans-1">Bernie Sanders</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-2" value="1">
+                        <label  for="ans-2">Joe Biden</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-3" value="2">
+                        <label for="ans-3">Elizabeth Warren</label>
+                        <br>
+                        <input type="radio" name="education" id="ans-4" value="3">
+                        <label  style="border:3px solid green;" for="ans-4">Andrew Yang</label>
+                        <br>
                         <button type='submit' for="question">Submit!</button>
                 </fieldset>
+
         </form>
         <h3> Your score is <span class ="current-score"> 0</span> out of <span class= "possible-score">0</span>.</h3>
         </section>
 
-<!-- After hitting submit, the next question should generate with same template-->
+<!-- After hitting submit, a prompt will arise with whether or not you were right and next question should generate with same template-->
+<section style="border:2px solid black;">
+<h1> Your answer was <span style="color:red;">******</span></h1>
+<p>More information about the correct answer goes here. </p>
+<button>Next!</button>
+</section>
 <!-- After submitting final question, this page will generate-->
 <section>
     <h1>Your Final Score!</h1>
@@ -58,5 +139,6 @@
     <h3> Thanks for taking the Quiz!</h3>
     <button href="index.html">Try Again!</button>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>
