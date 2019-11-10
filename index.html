@@ -9,20 +9,32 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <style>
+      .js-question-box {
+          border: 3px solid black;
+      }
+  </style>
 </head>
 <body>
+
+    
     <!-- The title page of the quiz-->
+    
     <header>
         <h1> The American Education Quiz</h1>
+        <h2>Question <span class="question-number">0</span> of 5. </h2>
+        <h3> Your score is <span class ="current-score"> 0</span> out of <span class= "possible-score">0</span>.</h3>
     </header>
     <main>
+
+    <div class= "js-question-box">
         <p>A quiz about education in America</p>
-    
-    <button class = "js-start-button"> Start </button>
+ 
+    <button type="button" class ="js-start-button"> Start </button>
     </main>
+
 <!-- After hitting start, this should generate-->
-    <section>
-        <h2>Question <span class="question-number">1</span> of 5. </h2>
+ <!---   <section>
       
         <form>
                 <fieldset>
@@ -43,9 +55,10 @@
                         <button type='submit'>Submit!</button>
                 </fieldset>
         </form>
-        <form>
+    -->
+      <!---  <form>
                 <fieldset>
-                        <legend class="question question-2">2) Approximately what percentage of US college graduates are in jobs that don’t require the degree they earned?  </legend>
+                        <legend class="question question-2">2)  </legend>
                         <input type="radio" name="education" id="ans-1" value="0">
                         <label for="ans-1">10%</label>
                         <br>
@@ -118,17 +131,16 @@
                 </fieldset>
 
         </form>
-        <h3> Your score is <span class ="current-score"> 0</span> out of <span class= "possible-score">0</span>.</h3>
         </section>
-
+    -->
 <!-- After hitting submit, a prompt will arise with whether or not you were right and next question should generate with same template-->
-<section style="border:2px solid black;">
+<!--<section style="border:2px solid black;">
 <h1> Your answer was <span style="color:red;">******</span></h1>
 <p>More information about the correct answer goes here. </p>
 <button>Next!</button>
-</section>
+-->
 <!-- After submitting final question, this page will generate-->
-<section>
+<!--<section>
     <h1>Your Final Score!</h1>
 
     <h2>
@@ -138,7 +150,9 @@
 <footer>
     <h3> Thanks for taking the Quiz!</h3>
     <button href="index.html">Try Again!</button>
-</footer>
+    </footer>
+-->
+
 <script src="main.js"></script>
 </body>
 </html>
