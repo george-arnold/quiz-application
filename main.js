@@ -5,6 +5,7 @@ const STORE = [
             '32%','6%','15%','65%'
         ],
         correctAnswer: 1,
+        fact: 'Only <strong>6%</strong> of high school students in the US are enrolled in vocational programs.',
         imagePath: 'images/high-school.jpeg'
     },
     {//Question 2
@@ -13,14 +14,16 @@ const STORE = [
             '10%','22%','15%','33%'
         ],
         correctAnswer: 3,
+        fact: '<strong>33%</strong> of US college graduates are in jobs that do not use the degree they earned.',
         imagePath: 'images/degrees-2.jpeg'
     },
     {//Question 3
-        question: 'Six years after first enrolling in college, approximately what percentage of students have not obtained a degree??',
+        question: 'Six years after first enrolling in college, approximately what percentage of students have not obtained a degree?',
         answers: [
             '40%','30%','25%','17%'
         ],
         correctAnswer: 0,
+        fact: '<strong>40%</strong> of students have not graduated within 6 years of their first enrollement in college.',
         imagePath: 'images/question-4-image.png'
     },
     {//Question 4
@@ -29,6 +32,7 @@ const STORE = [
             '10','7','3','20'
         ],
         correctAnswer: 2,
+        fact: '1 of every <strong>3</strong> Americans are in danger of losing their jobs to new technologies in the next 12 years. Truckers and retail workers are in the greatest danger. ',
         imagePath: 'images/question-3-image.jpg'
     },
     {//Question 5
@@ -38,6 +42,7 @@ const STORE = [
             'Bernie Sanders','Elizabeth Warren','Joe Biden','Andrew Yang'
         ],
         correctAnswer: 3,
+        fact: '<strong>Andrew Yang</strong> is the only candidate who is discussing educational reform by pushing students towards vocational training.',
         imagePath: 'images/question-5.png'
     }
 ];
@@ -59,10 +64,10 @@ $('.js-start-button').click(function() {
 //generates a new question and displays it in js-question-box
 function generateQuestion(questionItem,answerChoices) {
    updateQuestionNumber();
-    $(".js-question-box").html('<form> <fieldset> <legend class="question">' + questionItem + '</legend> <img width="200px" src="'+ STORE[currentQuestion].imagePath+ '"> <div class= "js-answers"></div> ');
+    $(".js-question-box").html('<form> <fieldset> <legend class="question">' + questionItem + '</legend> <img src="'+ STORE[currentQuestion].imagePath+ '"> <div class= "js-answers"></div> ');
 let answerOptions = STORE[currentQuestion].answers;
 for (i=0; i<answerOptions.length;i++) {
-    $(".js-answers").append('<input type="radio" id="ans-'+i+'" value='+i+'>  <label for="ans-'+i+'">' + answerOptions[i]+'</label> <br>');
+    $(".js-answers").append('<input type="radio" name="answer-choice" id="ans-'+i+'" value='+i+'>  <label for="ans-'+i+'">' + answerOptions[i]+'</label> <br>');
 }
 $(".js-question-box form fieldset").append('<button class="answer-submit" type="submit" for="question">Submit!</button> </fieldset> </form>');
 }
@@ -73,24 +78,20 @@ $(".question-number").html(questionNumber);
 }
 function updateScoreNumber(){
 $(".current-score").html(score);
-possibleScore += 1;
 $(".possible-score").html(possibleScore);
 
 }
 function correctAnswer() {
     score += 1;
-    $(".js-question-box").html("<h3>That's correct!</h3> <br> <button class='next' type='submit'>Next</button>")
+    $(".js-question-box").html("<h3>That's correct!</h3> <br> <p>" +STORE[currentQuestion].fact+ "</p><button class='next' type='submit'><span>Next</span></button>")
 }
 
 function incorrectAnswer() {
-    $(".js-question-box").html("<h3>That is incorrect!</h3> <br> <button class='next' type='submit'>Next</button>")
+    $(".js-question-box").html("<h3>That is incorrect!</h3> <br> <p>" +STORE[currentQuestion].fact+ "</p> <button class='next' type='submit'><span>Next</span></button>")
     
 }
 
-function displayAnswerInformation(){
-// shows additional information about the correct answer, and renders the "next" button
 
-}
 
 function submitAnswerHandler() {
     $(".js-question-box").on("click","button[class='answer-submit']",function (event){
@@ -101,12 +102,14 @@ alert ("You must select an answer");
 } else {
 if ($('input:checked').val()==correctOption) {
     correctAnswer();
+    possibleScore += 1;
     updateScoreNumber();
-    displayAnswerInformation();
+
 } else {
     incorrectAnswer();
+    possibleScore += 1;
     updateScoreNumber();
-    displayAnswerInformation();
+
     
 }
 }

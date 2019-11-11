@@ -1,19 +1,97 @@
 body {
-    background-color: #002d70;
+    background-color: #263bc5;
     color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
-    color: #da3248;
+    color: rgb(218,50,72);
+    text-align:center;
+    width: 75%;
+    margin: 0 auto;
+    background-color:white;
+    border-radius: 10px;
 }
-
+img {
+    width: 30%;
+    position:relative;
+    left: 35%;
+    border-radius: 10px;
+}
 fieldset {
     border:0;
 }
-form {
+.js-question-box {
     border: 2px solid white;
+    border-radius: 10px;
 }
+button {
+        text-align: center;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+}
+button:hover {
+    background-color:rgb(218,50,72);
+  }
+
+.next span {
+    transition: 0.5s;
+  }
+
+.next span:after {
+    content: '\00bb';
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+.next:hover span:after {
+    opacity: 1;
+  }
+
 
 legend {
-    font-size: 18px;
+    font-size: 20px;
+    padding: 10px 0; 
+}
+.js-answers {
+    padding-top:30px;
+    margin-bottom:10px;
+    font-size:18px;
+}
+fieldset input {
+    margin-top: 10px;
+}
+
+h2 span, h3 span {
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+strong {
+    color: rgb(219, 0, 29);
+    font-size:24px;
+}
+
+
+
+.header-container h3 {
+    border: 2px solid rgb(219,0,29);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.header-container {
+    display:flex;
+    justify-content:space-between;
+}
+
+.intro-text {
+    font-size: 24px;
+    text-align:center;
 }
