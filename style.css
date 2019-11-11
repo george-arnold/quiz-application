@@ -1,0 +1,19 @@
+body {
+    background-color: #002d70;
+    color: white;
+}
+
+h1 {
+    color: #da3248;
+}
+
+fieldset {
+    border:0;
+}
+form {
+    border: 2px solid white;
+}
+
+legend {
+    font-size: 18px;
+}
