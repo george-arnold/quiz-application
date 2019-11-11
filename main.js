@@ -37,7 +37,7 @@ const STORE = [
     },
     {//Question 5
         question: ' Which current US presidential candidate has vowed to help correct the over-prescription of college,'
-        + 'and limit the danger of job loss, by increasing funding towards vocational training options in public schools?',
+        + 'and limit the danger of job loss, by increasing funding towards vocational training in public schools?',
         answers: [
             'Bernie Sanders','Elizabeth Warren','Joe Biden','Andrew Yang'
         ],
@@ -47,7 +47,7 @@ const STORE = [
     }
 ];
 
-//initialize variables that control current question num and score num
+// initialize variables that control current question num and score num
 let score = 0;
 let currentQuestion = 0;
 let possibleScore = 0;
@@ -83,15 +83,13 @@ $(".possible-score").html(possibleScore);
 }
 function correctAnswer() {
     score += 1;
-    $(".js-question-box").html("<h3>That's correct!</h3> <br> <p>" +STORE[currentQuestion].fact+ "</p><button class='next' type='submit'><span>Next</span></button>")
+    $(".js-question-box").html("<h3>That is <strong>correct!</strong></h3> <br> <p>" +STORE[currentQuestion].fact+ "</p><button class='next' type='submit'><span>Next</span></button>")
 }
 
 function incorrectAnswer() {
-    $(".js-question-box").html("<h3>That is incorrect!</h3> <br> <p>" +STORE[currentQuestion].fact+ "</p> <button class='next' type='submit'><span>Next</span></button>")
+    $(".js-question-box").html("<h3>That is <strong>incorrect!</strong></h3> <br> <p>" +STORE[currentQuestion].fact+ "</p> <button class='next' type='submit'><span>Next</span></button>")
     
 }
-
-
 
 function submitAnswerHandler() {
     $(".js-question-box").on("click","button[class='answer-submit']",function (event){
@@ -111,11 +109,10 @@ if ($('input:checked').val()==correctOption) {
     updateScoreNumber();
 
     
+}}})
 }
-}
-})
 
-}
+// handles the next question button
 function nextQuestionHandler() {
     
 $('.js-question-box').on("click","button[class='next']", function(event) {

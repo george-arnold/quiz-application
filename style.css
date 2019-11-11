@@ -1,11 +1,11 @@
 body {
-    background-color: #263bc5;
+    background-color: #0533ff;
     color: white;
     font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
-    color: rgb(218,50,72);
+    color:#ff3705;
     text-align:center;
     width: 75%;
     margin: 0 auto;
@@ -36,7 +36,7 @@ button {
         transition-duration: 0.4s;
 }
 button:hover {
-    background-color:rgb(218,50,72);
+    background-color:#ff3705;
   }
 
 .next span {
@@ -68,20 +68,20 @@ fieldset input {
 }
 
 h2 span, h3 span {
-    background-color: black;
     padding: 5px;
-    border-radius: 10px;
+    color: black;
+    font-size:24px;
 }
 
 strong {
-    color: rgb(219, 0, 29);
+    color: #fb9902;
     font-size:24px;
 }
 
 
 
 .header-container h3 {
-    border: 2px solid rgb(219,0,29);
+    background-color: #ff3705;
     border-radius: 10px;
     padding: 5px;
 }
@@ -93,5 +93,17 @@ strong {
 
 .intro-text {
     font-size: 24px;
-    text-align:center;
+
+}
+
+/*For desktops*/
+@media only screen and (min-width: 768px) {
+    .header-container {
+        display:flex;
+        justify-content:space-around;
+    }
+    .js-question-box {
+        width: 75%;
+        margin: 0 auto;
+    }
 }
