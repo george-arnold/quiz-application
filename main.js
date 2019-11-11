@@ -5,7 +5,7 @@ const STORE = [
             '32%','6%','15%','65%'
         ],
         correctAnswer: 1,
-        imagePath: '/images/high-school.jpeg'
+        imagePath: 'images/high-school.jpeg'
     },
     {//Question 2
         question: 'Approximately what percentage of US college graduates are in jobs that don’t require the degree they earned? ',
@@ -13,7 +13,7 @@ const STORE = [
             '10%','22%','15%','33%'
         ],
         correctAnswer: 3,
-        imagePath: '/images/degrees-2.jpeg'
+        imagePath: 'images/degrees-2.jpeg'
     },
     {//Question 3
         question: 'Six years after first enrolling in college, approximately what percentage of students have not obtained a degree??',
@@ -21,7 +21,7 @@ const STORE = [
             '40%','30%','25%','17%'
         ],
         correctAnswer: 0,
-        imagePath: '/images/question-4-image.png'
+        imagePath: 'images/question-4-image.png'
     },
     {//Question 4
         question: ' In the next 12 years, 1 of every ___ Americans are in danger of losing their jobs to new technologies',
@@ -29,7 +29,7 @@ const STORE = [
             '10','7','3','20'
         ],
         correctAnswer: 2,
-        imagePath: '/images/question-3-image.jpg'
+        imagePath: 'images/question-3-image.jpg'
     },
     {//Question 5
         question: ' Which current US presidential candidate has vowed to help correct the over-prescription of college,'
@@ -38,7 +38,7 @@ const STORE = [
             'Bernie Sanders','Elizabeth Warren','Joe Biden','Andrew Yang'
         ],
         correctAnswer: 3,
-        imagePath: '/images/question-5.png'
+        imagePath: 'images/question-5.png'
     }
 ];
 
