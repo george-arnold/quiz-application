@@ -95,7 +95,14 @@ strong {
     font-size: 24px;
 
 }
-
+/* For mobile and tablet*/
+@media only screen and (max-width: 768px) {
+   img{ width: 50%;
+    position:relative;
+    left: 25%;
+    border-radius: 10px;
+}
+}
 /*For desktops*/
 @media only screen and (min-width: 768px) {
     .header-container {
